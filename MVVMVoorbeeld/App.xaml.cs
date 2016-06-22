@@ -13,5 +13,15 @@ namespace MVVMVoorbeeld
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            Model.TekstMetOpmaak mijnTekst = new Model.TekstMetOpmaak();
+            ViewModel.TekstMetOpmaakVM vm = new ViewModel.TekstMetOpmaakVM(mijnTekst);
+            View.TextBoxView mijnTekstboxView = new View.TextBoxView();
+
+            mijnTekstboxView.DataContext = vm;
+            mijnTekstboxView.Show();
+        }
     }
 }
