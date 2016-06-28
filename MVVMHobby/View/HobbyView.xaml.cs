@@ -12,10 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-
-
 namespace MVVMHobby.View
 {
     /// <summary>

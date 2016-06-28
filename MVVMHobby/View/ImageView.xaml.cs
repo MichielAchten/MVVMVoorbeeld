@@ -26,37 +26,5 @@ namespace MVVMHobby.View
         {
             InitializeComponent();
         }
-
-        View.ImageView groteView;
-
-        public RelayCommand<MouseEventArgs> MouseDownCommand
-        {
-            get
-            {
-                return new RelayCommand<MouseEventArgs>(MuisIn);
-            }
-        }
-
-        private void MuisIn(MouseEventArgs e)
-        {
-            Image tg = (Image)e.OriginalSource;
-            groteView = new View.ImageView();
-            groteView.GroteImage.Source = tg.Source;
-            groteView.Show();
-        }
-
-        public RelayCommand<MouseEventArgs> MouseUpCommand
-        {
-            get { return new RelayCommand<MouseEventArgs>(MuisUit); }
-        }
-
-        private void MuisUit(MouseEventArgs e)
-        {
-            if (groteView != null)
-            {
-                groteView.Close();
-            }
-            groteView = null;
-        }
     }
 }
