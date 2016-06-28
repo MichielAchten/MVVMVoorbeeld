@@ -23,7 +23,7 @@ namespace MVVMHobby.ViewModel
             HobbyLijst.Add(new HobbyVM(new Model.Hobby("sport", "turnen", new BitmapImage(new Uri("pack://application:,,,/images/turnen.jpg", UriKind.Absolute)))));
             HobbyLijst.Add(new HobbyVM(new Model.Hobby("muziek", "trompet", new BitmapImage(new Uri("pack://application:,,,/images/trompet.jpg", UriKind.Absolute)))));
             HobbyLijst.Add(new HobbyVM(new Model.Hobby("muziek", "drum", new BitmapImage(new Uri("pack://application:,,,/images/drum.jpg", UriKind.Absolute)))));
-            HobbyLijst.Add(new HobbyVM(new Model.Hobby("muziek", "gitaat", new BitmapImage(new Uri("pack://application:,,,/images/gitaat.jpg", UriKind.Absolute)))));
+            HobbyLijst.Add(new HobbyVM(new Model.Hobby("muziek", "gitaar", new BitmapImage(new Uri("pack://application:,,,/images/gitaar.jpg", UriKind.Absolute)))));
             HobbyLijst.Add(new HobbyVM(new Model.Hobby("muziek", "piano", new BitmapImage(new Uri("pack://application:,,,/images/piano.jpg", UriKind.Absolute)))));
         }
 

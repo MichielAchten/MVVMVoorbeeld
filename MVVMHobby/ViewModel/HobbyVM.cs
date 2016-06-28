@@ -80,8 +80,22 @@ namespace MVVMHobby.ViewModel
         {
             Image tg = (Image)e.OriginalSource;
             groteView = new View.ImageView();
-            //groteView.GroteImage.source
-            //nog niet klaar
+            groteView.GroteImage.Source = tg.Source;
+            groteView.Show();
+        }
+
+        public RelayCommand<MouseEventArgs> MouseUpCommand
+        {
+            get { return new RelayCommand<MouseEventArgs>(MuisUit); }
+        }
+
+        private void MuisUit(MouseEventArgs e)
+        {
+            if (groteView != null)
+            {
+                groteView.Close();
+            }
+            groteView = null;
         }
     }
 }

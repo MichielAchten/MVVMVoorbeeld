@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+
 namespace MVVMHobby.View
 {
     /// <summary>
@@ -22,6 +25,38 @@ namespace MVVMHobby.View
         public ImageView()
         {
             InitializeComponent();
+        }
+
+        View.ImageView groteView;
+
+        public RelayCommand<MouseEventArgs> MouseDownCommand
+        {
+            get
+            {
+                return new RelayCommand<MouseEventArgs>(MuisIn);
+            }
+        }
+
+        private void MuisIn(MouseEventArgs e)
+        {
+            Image tg = (Image)e.OriginalSource;
+            groteView = new View.ImageView();
+            groteView.GroteImage.Source = tg.Source;
+            groteView.Show();
+        }
+
+        public RelayCommand<MouseEventArgs> MouseUpCommand
+        {
+            get { return new RelayCommand<MouseEventArgs>(MuisUit); }
+        }
+
+        private void MuisUit(MouseEventArgs e)
+        {
+            if (groteView != null)
+            {
+                groteView.Close();
+            }
+            groteView = null;
         }
     }
 }

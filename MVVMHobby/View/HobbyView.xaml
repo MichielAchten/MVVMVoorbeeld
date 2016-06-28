@@ -39,7 +39,7 @@
             <Image Grid.Column="1" Grid.Row="2" Margin="10" Source="{Binding SelectedHobby.Symbool}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseDown">
-                        <gala:EventToCommand Command="{Binding MouseDownCommand}" PassEventArgsToCommand="True" />
+                        <gala:EventToCommand Command="{Binding MouseDownCommand}" PassEventArgsToCommand="True" CommandParameter="{Binding}"/>
                     </i:EventTrigger>
                     <i:EventTrigger EventName="MouseUp">
                         <gala:EventToCommand Command="{Binding MouseUpCommand}" PassEventArgsToCommand="True" />
