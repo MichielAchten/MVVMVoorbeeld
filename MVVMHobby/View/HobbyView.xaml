@@ -8,6 +8,8 @@
         xmlns:local="clr-namespace:MVVMHobby.ViewModel"
         
         xmlns:gala="http://www.galasoft.ch/mvvmlight"
+        
+        
         Title="HobbyView" Height="300" Width="600">
     <Grid Name="LayoutRoot" Background="Transparent">
         <Grid.ColumnDefinitions>
