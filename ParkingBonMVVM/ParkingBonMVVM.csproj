@@ -70,6 +70,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\ParkingBon.cs" />
+    <Compile Include="ViewModel\ParkingBonVM.cs" />
     <Compile Include="View\ParkingBonView.xaml.cs">
       <DependentUpon>ParkingBonView.xaml</DependentUpon>
     </Compile>
@@ -110,9 +112,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="View\Images\Bestand.png" />
     <Resource Include="View\Images\close.jpg" />
