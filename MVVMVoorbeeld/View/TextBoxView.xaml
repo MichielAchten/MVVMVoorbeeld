@@ -4,8 +4,7 @@
         xmlns:local="clr-namespace:MVVMVoorbeeld.ViewModel"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:gala="http://www.galasoft.ch/mvvmlight"
-        Title="TextBox met MVVM" Height="350" Width="300" 
-        Icon="font.ico">
+        Title="TextBox met MVVM" Height="350" Width="300">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName ="Closing">
             <gala:EventToCommand Command="{Binding ClosingCommand}" PassEventArgsToCommand="True"/>
