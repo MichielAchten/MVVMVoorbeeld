@@ -22,7 +22,7 @@
         <Button Name="ButtonLoad" Content="Laad Hobby's"
             HorizontalAlignment="Left" Margin="8,0,0,3" 
             VerticalAlignment="Bottom" Width="250" Command="{Binding VerwijderCommand}" />
-        <Grid Grid.Column="1" Background="Transparent">
+        <Grid Grid.Column="1" Background="Transparent" DataContext="{Binding SelectedHobby}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
@@ -40,10 +40,10 @@
             <Label Margin="10,30,0,40" Grid.Row="2" HorizontalAlignment="Left" 
         VerticalAlignment="Center" Content="Symbool:" Height="28" Width="80"/>
             <TextBox Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" 
-        Margin="10,15" Height="24" Text="{Binding SelectedHobby.Categorie}"/>
+        Margin="10,15" Height="24" Text="{Binding Categorie}"/>
             <TextBox Grid.Column="1" TextWrapping="Wrap" Grid.Row="1" 
-        VerticalAlignment="Center" Margin="10,15" Height="24" Text="{Binding SelectedHobby.Activiteit, UpdateSourceTrigger=PropertyChanged}"/>
-            <Image Grid.Column="1" Grid.Row="2" Margin="10" Source="{Binding SelectedHobby.Symbool}">
+        VerticalAlignment="Center" Margin="10,15" Height="24" Text="{Binding Activiteit, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Grid.Column="1" Grid.Row="2" Margin="10" Source="{Binding Symbool}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseDown">
                         <gala:EventToCommand Command="{Binding MouseDownCommand}" PassEventArgsToCommand="True"/>

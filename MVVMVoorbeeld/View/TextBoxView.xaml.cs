@@ -22,6 +22,9 @@ namespace MVVMVoorbeeld.View
         public TextBoxView()
         {
             InitializeComponent();
+            Uri iconUri = new Uri("pack://application:,,,/Images/font.ico", UriKind.RelativeOrAbsolute);
+
+            this.Icon = BitmapFrame.Create(iconUri);
         }
     }
 }
